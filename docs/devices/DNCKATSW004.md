@@ -18,7 +18,7 @@ pageClass: device-page
 | Model | DNCKATSW004  |
 | Vendor  | [Custom devices (DiY)](/supported-devices/#v=Custom%20devices%20(DiY))  |
 | Description | DNCKAT quadruple key wired wall light switch |
-| Exposes | switch (state), power_on_behavior, action, linkquality |
+| Exposes | switch (state), power_on_behavior, action |
 | Picture | ![Custom devices (DiY) DNCKATSW004](https://www.zigbee2mqtt.io/images/devices/DNCKATSW004.png) |
 
 
@@ -31,8 +31,6 @@ pageClass: device-page
 
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
-
-* `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
 
 * `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
@@ -116,11 +114,4 @@ Triggered action (e.g. a button click).
 Value can be found in the published state on the `action` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The possible values are: `release_bottom_left`, `hold_bottom_left`, `release_bottom_right`, `hold_bottom_right`, `release_top_left`, `hold_top_left`, `release_top_right`, `hold_top_right`.
-
-### Linkquality (numeric)
-Link quality (signal strength).
-Value can be found in the published state on the `linkquality` property.
-It's not possible to read (`/get`) or write (`/set`) this value.
-The minimal value is `0` and the maximum value is `255`.
-The unit of this value is `lqi`.
 
